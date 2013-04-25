@@ -8,12 +8,12 @@ module.exports = function(grunt) {
 			separator: ';'
 		},
 		basic:{
-			src: ['src/**/*.js'],
+			src: ['src/web/public/js/**/*.js','!src/web/public/js/libs/**/*.js'],
 			dest: 'build/<%= pkg.name %>.js'
 		},
 		lib:{
-			src: ['libs/**/*.js'],
-			dest: 'libs/libs.js'
+			src: ['src/web/public/js/libs/**/*.js'],
+			dest: 'build/libs.js'
 		}
 	},
 	jshint:{
@@ -45,8 +45,9 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        src: 'build/<%= pkg.name %>.js',
-        dest: 'build/<%= pkg.name %>.min.js'
+        files: {'build/<%= pkg.name %>.min.js': ['build/<%= pkg.name %>.js'],
+				'build/lib-min.js': ['build/libs.js']
+        }
       }
     },
 	watch:{
