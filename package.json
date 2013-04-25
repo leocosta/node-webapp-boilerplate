@@ -1,0 +1,19 @@
+{
+  "name": "node-webapp-boilerplate",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node src/app"
+  },
+  "dependencies": {
+    "express": "3.1.0",
+    "jade": "*",
+    "grunt": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.0",
+    "grunt-contrib-concat": "~0.2.0",
+    "grunt-contrib-watch": "~0.3.1",
+    "grunt-simple-mocha": "~0.4.0",
+    "grunt-contrib-jshint": "~0.4.3",
+    "winston": "~0.7.1"
+  }
+}

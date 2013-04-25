@@ -1,0 +1,40 @@
+doctype 5
+//[if IE 8]
+	html.no-js.lt-ie9(lang='en')
+//[if gt IE 8]><!
+	html.no-js(lang='en')
+
+html
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width')
+		title= title
+		link(rel='stylesheet', href='css/libs/normalize.css')
+		link(rel='stylesheet', href='css/libs/foundation.css')
+		script(src='js/libs/custom.modernizr.js')
+	body
+		block content
+		script
+			document.write('<script src=' +
+				('__proto__' in {} ? 'js/libs/zepto' : 'js/libs/jquery') +
+				'.js><\/script>')
+		script(src='js/libs/require-min.js')
+		script(src='js/libs/underscore-min.js')
+		script(src='js/libs/backbone-min.js')
+		script(src='js/libs/foundation.min.js')
+		script(src='js/libs/foundation/foundation.js')
+		script(src='js/libs/foundation/foundation.dropdown.js')
+		script(src='js/libs/foundation/foundation.placeholder.js')
+		script(src='js/libs/foundation/foundation.forms.js')
+		script(src='js/libs/foundation/foundation.alerts.js')
+		script(src='js/libs/foundation/foundation.magellan.js')
+		script(src='js/libs/foundation/foundation.reveal.js')
+		script(src='js/libs/foundation/foundation.tooltips.js')
+		script(src='js/libs/foundation/foundation.clearing.js')
+		script(src='js/libs/foundation/foundation.cookie.js')
+		script(src='js/libs/foundation/foundation.joyride.js')
+		script(src='js/libs/foundation/foundation.orbit.js')
+		script(src='js/libs/foundation/foundation.section.js')
+		script(src='js/libs/foundation/foundation.topbar.js')
+		script
+			$(document).foundation();
